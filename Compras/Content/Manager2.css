@@ -3,6 +3,10 @@
 }
 
 #info{
+    
+}
+
+#table_actions{
     overflow-y: scroll;
 }
 
@@ -15,7 +19,7 @@
 }
 
 #filtre{
-    height:100px;
+     height: 270px;
 }
 
 #wrapper{
@@ -23,7 +27,8 @@
 }
 
 .omg{
-    word-wrap: break-word
+    word-wrap: break-word;
+    width: 500px;
 }
 
 

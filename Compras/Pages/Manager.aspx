@@ -43,13 +43,14 @@
             <!-- LLISTA -->
             <div class="span5">
                 
-                <div style="height: 170px">
+                <div id="filtre">
                     <h3>Filtre</h3>
                     <form>
                         <fieldset>
-                            <label>Assumpte: <input type="text" placeholder="Type something…"></label>
-                            <label>Autor: <input type="text" placeholder="Type something…"></label>
-                            <button type='button' onclick="console.log('clickey');" class="btn">Filtra</button>
+                            <label>Autor: <input type="text" placeholder="Type something…" id="autor1"></label>
+                            <label>Id: <input type="text" placeholder="Type something…" id="id1"></label>
+                            <label>Title: <input type="text" placeholder="Type something…" id="title1"></label>
+                            <button type='button' onclick="updatecompras1();" class="btn" style="float: right;">Filtra</button>
                         </fieldset>
                     </form>
                 </div>
@@ -101,14 +102,14 @@
 
                 <div style="height: 170px">
                     <h3>Edit</h3>
-                    <button type='button' id="button1" onclick="accio();" class="btn" disabled>Acció</button>
-                    <button type="button" id="button2" class="btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat" disabled>Comentar</button> 
+                    <button type='button' onclick="createAction('Acceptat');" class="btn button1" disabled>Acceptat</button>
+                    <button type='button' onclick="createAction('Rejected');" class="btn button1" disabled>Rejected</button>
+                    <button type='button' onclick="createAction('Ordered');" class="btn button1" disabled>Ordered</button>
+                    <button type='button' onclick="createAction('Arrived');" class="btn button1" disabled>Arrived</button>
+                    <button type="button" class="btn button1" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat" disabled>Comentar</button> 
                 </div>
 
                 <div id="info">
-                    <div class="panel panel-primary">
-                    <!-- Default panel contents -->
-                    <div class="panel-heading"><h3>Detalls</h3></div>
 
                     <table class="table table-hover" id="table_info">
                         
@@ -174,18 +175,21 @@
                                 </div>
 
                                 <table class="table table-bordered" id="table_actions" data-bind="foreach: info" style="display: none; width: 100%;">
-                                    <tbody>
+                                    <tbody style="width: 300px;">
                                     <tr>
-                                        <td class="omg">
+                                        <td>
                                             <!-- ko if: type === 'Comment' -->
-                                            <div><b>Comment</b></div>
-                                            <div><i data-bind="text: author"></i></div>
-                                            <div data-bind="text: content"></div>
+                                            <div><b data-bind="text: author"></b></div>
+                                            <div style="font-size: 12px;"><i data-bind="text: date"></i></div>
+                                            <div class="omg" data-bind="text: content"></div>
                                             <!-- /ko -->
                                             <!-- ko if: type === 'Action' -->
-                                            <div><b data-bind="text: content"></b></div>
-                                            <div><i data-bind="text: author"></i></div>
-                                            <div><i data-bind="text: date"></i></div>
+                                            <div><b data-bind="text: author"></b></div>
+                                            <div style="font-size: 12px;"><i data-bind="text: date"></i></div>
+                                            <div class="omg" data-bind="text: content"></div>
+                                            <!-- /ko -->
+                                            <!-- ko if: type === 'none' -->
+                                            <div class="omg"><i>No actions yet...</i></div>
                                             <!-- /ko -->
                                         </td>
                                     </tr>
@@ -195,7 +199,6 @@
                         </tr>
                     </table>
 
-                </div>
                     </div>
             
             </div>
