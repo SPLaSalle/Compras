@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Compras" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/Compras" Description="Mi instancia de lista" Hidden="FALSE">
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">RAM</Field>
+          <Field Name="Description">Asap</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">GFX</Field>
+          <Field Name="Description">QQ</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">OMG</Field>
+          <Field Name="Description">Si</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">jeje</Field>
+          <Field Name="Description">oke</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">top</Field>
+          <Field Name="Description">Kek?</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Indeed</Field>
+          <Field Name="Description">Means no</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Indeed</Field>
+          <Field Name="Description">Means no</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Indeed</Field>
+          <Field Name="Description">Means no</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Indeed</Field>
+          <Field Name="Description">Means no</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Indeed</Field>
+          <Field Name="Description">Means no</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Indeed</Field>
+          <Field Name="Description">Means no</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">Indeed</Field>
+          <Field Name="Description">Means no</Field>
+        </Row>
+      </Rows>
+    </Data>
+  </ListInstance>
+</Elements>

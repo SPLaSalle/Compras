@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="789c2b12-9c57-4b5d-b723-97afbd1fbe76" solutionId="789c2b12-9c57-4b5d-b723-97afbd1fbe76" resetWebServer="false" sharePointProductVersion="16.0" name="Compras" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="2e32948e-0463-4ef3-bf6b-163b609a61ba" />
+    <featureReference itemId="a45dbd91-7fc2-4721-b8ed-4ef37a4b77fc" />
+  </features>
+</package>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Actions" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/Actions" Description="Mi instancia de lista">
+
+    <Data>
+      <Rows>
+        <Row>
+          <Field Name="Title">titleok1111</Field>
+          <Field Name="ID_compra">1</Field>
+          <Field Name="Type">Comment</Field>
+          <Field Name="Content">So good</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">prova</Field>
+          <Field Name="ID_compra">1</Field>
+          <Field Name="Type">Comment</Field>
+          <Field Name="Content">Aw Lawrd</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">prova</Field>
+          <Field Name="ID_compra">1</Field>
+          <Field Name="Type">Action</Field>
+          <Field Name="Content">Accepted</Field>
+        </Row>
+        <Row>
+          <Field Name="Title">titleok4444</Field>
+          <Field Name="ID_compra">2</Field>
+          <Field Name="Type">Comment</Field>
+          <Field Name="Content">Ok</Field>
+        </Row>
+      </Rows>
+    </Data>
+
+  </ListInstance>
+</Elements>
