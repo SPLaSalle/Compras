@@ -2,7 +2,7 @@
 var MV;
 $(function () {
     //console.log(window.innerHeight);
-    $("#list").css('height', window.innerHeight - 456);
+    $("#list").css('height', window.innerHeight - 406);
     $("#info").css('height', window.innerHeight - 356);
     $(".omg").css('width', document.getElementById("info").offsetWidth - 52);
     

@@ -46,12 +46,15 @@
                 <div id="filtre">
                     <h3>Filtre</h3>
                     <form>
+
+                        
                         <fieldset>
-                            <label>Autor: <input type="text" placeholder="Type something…" id="autor1"></label>
-                            <label>Id: <input type="text" placeholder="Type something…" id="id1"></label>
-                            <label>Title: <input type="text" placeholder="Type something…" id="title1"></label>
+                            <label class="span1">Autor: </label><input class="span4" type="text" placeholder="Type something…" id="autor1">
+                            <label class="span1">Id: </label><input class="span4" type="text" placeholder="Type something…" id="id1">
+                            <label class="span1">Title: </label><input class="span4" type="text" placeholder="Type something…" id="title1" >
                             <button type='button' onclick="updatecompras1();" class="btn" style="float: right;">Filtra</button>
                         </fieldset>
+                        
                     </form>
                 </div>
 
@@ -80,18 +83,18 @@
 
                     <div class="panel panel-primary" id="list_show" style="display: none">
                     <!-- Default panel contents -->
-                    <div class="panel-heading"><h3>Compres</h3></div>
+                        <div class="panel-heading"><h3>Compres</h3></div>
 
-                    <table class="table table-hover"  data-bind="foreach: compras">
+                        <table class="table table-hover"  data-bind="foreach: compras">
 
-                        <tr data-bind="click: $parent.showinfo">
-                            <td>
-                                <div class="title"><b data-bind="text: title"></b> (id <j data-bind="text: id"></j>)</div>
-                                <div class="author" data-bind="text: author"></div>
-                                <div class="date" data-bind="text: date"></div>
-                            </td>
-                        </tr>
-                    </table>
+                            <tr data-bind="click: $parent.showinfo">
+                                <td>
+                                    <div class="title"><b data-bind="text: title"></b> (id <j data-bind="text: id"></j>)</div>
+                                    <div class="author" data-bind="text: author"></div>
+                                    <div class="date" data-bind="text: date"></div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
 
