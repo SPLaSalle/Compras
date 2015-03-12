@@ -11,5 +11,7 @@
     <File Path="Scripts\knockout-2-2-1.js" Url="Scripts/knockout-2-2-1.js" ReplaceContent="TRUE" />
     <File Path="Scripts\bootstrap.min.js" Url="Scripts/bootstrap.min.js" ReplaceContent="TRUE" />
     <File Path="Scripts\bootstrap-old.min.js" Url="Scripts/bootstrap-old.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\New.js" Url="Scripts/New.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Miscompras.js" Url="Scripts/Miscompras.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

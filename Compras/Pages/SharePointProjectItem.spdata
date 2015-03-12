@@ -4,5 +4,7 @@
     <ProjectItemFile Source="Elements.xml" Target="Pages\" Type="ElementManifest" />
     <ProjectItemFile Source="Default.aspx" Target="Pages\" Type="ElementFile" />
     <ProjectItemFile Source="Manager.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="miscompras.aspx" Target="Pages\" Type="ElementFile" />
+    <ProjectItemFile Source="new.aspx" Target="Pages\" Type="ElementFile" />
   </Files>
 </ProjectItem>

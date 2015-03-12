@@ -1,17 +1,42 @@
 ﻿var id;
 var MV;
+var currentUser;
 $(function () {
     //console.log(window.innerHeight);
-    $("#list").css('height', window.innerHeight - 468);
+    $("#list").css('height', window.innerHeight - 238);
     $("#info").css('height', window.innerHeight - 348);
     $(".omg").css('width', document.getElementById("info").offsetWidth - 52);
-    
+
     $("#table_actions").css('max-height', window.innerHeight - 622);
+    
+    getCurrentUser();
+
+    // AKI NO CONTINUEM
 
     document.getElementById('wrapper').style.height = (window.innerHeight - 200);
+});
+
+
+function getCurrentUser() {
+    var context = new SP.ClientContext.get_current();
+    var web = context.get_web();
+    currentUser = web.get_currentUser();
+    context.load(currentUser);
+    context.executeQueryAsync(onSuccessMethod, onRequestFail);
+}
+
+function onSuccessMethod(sender, args) {
+    currentUser = currentUser.get_title();
+    console.log(currentUser);
+
+    //CONTINUEM AKI
     MV = new defaultViewModel();
     ko.applyBindings(MV);
-});
+}
+// This function runs if the executeQueryAsync call fails.
+function onRequestFail(sender, args) {
+    alert('request failed' + args.get_message() + '\n' + args.get_stackTrace());
+}
 
 function updatecompras1() {
     MV.updatecompras();
@@ -39,6 +64,7 @@ function defaultViewModel() {
     self._loadList = function () {
         var clientContext = SP.ClientContext.get_current();
 
+
         // This line accesses the homework library in the local app web.
         var list = clientContext.get_web().get_lists().getByTitle('Compras');
 
@@ -47,7 +73,18 @@ function defaultViewModel() {
         //     var list = hostWebContext.get_web().get_lists().getByTitle('Homework');
 
         var query = new SP.CamlQuery();
-        query.set_viewXml();
+        console.log(currentUser + "2");
+        query.set_viewXml("<View>"
+                                                + "  <Query>"
+                                                + "  <Where>"
+                                                + "    <Contains>"
+                                                + "       <FieldRef Name='Author' />"
+                                                + "       <Value Type='text'>" + currentUser + "</Value>"
+                                                + "    </Contains>"
+                                                + "  </Where>"
+                                                + "  </Query>"
+                                                + "  <RowLimit>100</RowLimit>"
+                                                + "</View>");
 
         self._pendingItems = list.getItems(query);
         clientContext.load(self._pendingItems);
@@ -75,14 +112,27 @@ function defaultViewModel() {
                 });
         }
 
+
+        if (listEnumerator.$2F_0 == 0) {
+            self.info.push(
+                {
+                    title: 'none',
+                    date: 'none',
+                    author: 'none',
+                    id: 0,
+                    description: 'none'
+                });
+        }
+
         document.getElementById("list_show").style.display = "block";
         document.getElementById("spinner_list").style.display = "none";
-        
+
 
     }
 
     self.resetcompras = function () {
         var clientContext = SP.ClientContext.get_current();
+
 
         // This line accesses the homework library in the local app web.
         var list = clientContext.get_web().get_lists().getByTitle('Compras');
@@ -379,7 +429,7 @@ function defaultViewModel() {
     }
 
     self.updateinfo = function () {
-        
+
         console.log('updateinfo');
 
         document.getElementById("table_actions").style.display = "none";
@@ -424,9 +474,9 @@ function defaultViewModel() {
         //console.log(self.compras()[compra.id - 1].description);
 
         var aux;
-        for (var i = 0; i < self.compras().length; i++){
+        for (var i = 0; i < self.compras().length; i++) {
             //console.log(self.compras()[i].id);
-            if (self.compras()[i].id == compra.id){
+            if (self.compras()[i].id == compra.id) {
                 aux = i;
             }
         }
@@ -500,7 +550,7 @@ function comment() {
     createComment(comment);
 
     //$('#exampleModal').modal('hide');
-   // $('#modal_comment').val('');
+    // $('#modal_comment').val('');
 }
 
 function createComment(comment) {
@@ -541,7 +591,7 @@ function createAction(accio) {
     oListItem.set_item('ID_x005f_compra', id);
     oListItem.set_item('Content1', accio);
     oListItem.update();
-    
+
     clientContext.load(oListItem);
     clientContext.executeQueryAsync(
         Function.createDelegate(this, this.onQuerySucceeded3),

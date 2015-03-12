@@ -18,9 +18,9 @@
     <link rel="Stylesheet" type="text/css" href="../Content/Manager2.css" />
 
     <!-- Agregue el código JavaScript al siguiente archivo -->
-    <script type="text/javascript" src="../Scripts/Manager.js"></script>
+    <script type="text/javascript" src="../Scripts/Miscompras.js"></script>
 
-    <!-- BOOTSTRAP -->
+
     <link rel="Stylesheet" type="text/css" href="../Content/bootstrap-old.min.css" />
     <link rel="Stylesheet" type="text/css" href="../Content/bootstrap-responsive.min.css" />
 
@@ -30,12 +30,11 @@
 
 <%-- El marcado del elemento Content siguiente se pondrá en el elemento TitleArea de la página --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
-    Manager
+    Les meves compres
 </asp:Content>
 
 <%-- El marcado y el script del elemento Content siguiente se pondrán en el elemento <body> de la página --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
-    
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -43,8 +42,8 @@
       <ul class="nav navbar-nav" style="border: 1px solid black;">
         <li><a href="Default.aspx?{StandardTokens}">Home</a></li>
         <li><a href="new.aspx?{StandardTokens}">Nova sol·licitud</a></li>
-        <li><a href="miscompras.aspx?{StandardTokens}">Les meves sol·licituds</a></li>
-        <li class="active"><a href="Manager.aspx?{StandardTokens}">Manager de compres</a></li>
+        <li class="active"><a href="miscompras.aspx?{StandardTokens}">Les meves sol·licituds</a></li>
+        <li><a href="Manager.aspx?{StandardTokens}">Manager de compres</a></li>
         <li><a href="../Lists/Compras">Llista compras</a></li>
         <li><a href="../Lists/Actions">Llista accions</a></li>
       </ul>
@@ -52,29 +51,13 @@
   </div>
 </nav>
 
+    
     <div class="container" id="wrapper">
 
         <div class="row">
             
             <!-- LLISTA -->
             <div class="span5">
-                
-                <div id="filtre">
-                    <h3>Filtre</h3>
-                    <form>
-
-                        
-                        <fieldset>
-                            <label class="span1">Title: </label><input class="span4" type="text" placeholder="Type something…" id="title1" >
-                            <label class="span1">Id: </label><input class="span4" type="text" placeholder="Type something…" id="id1">
-                            <label class="span1">Autor: </label><input class="span4" type="text" placeholder="Type something…" id="autor1">
-                            <button type='button' onclick="updatecompras1();" class="btn" style="float: right;">Filtra</button>
-                            <button type='button' onclick="resetcompras1();" class="btn" style="float: right;">Reset</button>
-                        </fieldset>
-                        
-                    </form>
-                </div>
-
                 <div id="list">
                     
                     <div class="spinner" id="spinner_list">
@@ -122,10 +105,6 @@
 
                 <div style="height: 100px">
                     <h3>Detalls</h3>
-                    <button type='button' onclick="createAction('Acceptat');" class="btn button1" disabled>Acceptat</button>
-                    <button type='button' onclick="createAction('Rejected');" class="btn button1" disabled>Rejected</button>
-                    <button type='button' onclick="createAction('Ordered');" class="btn button1" disabled>Ordered</button>
-                    <button type='button' onclick="createAction('Arrived');" class="btn button1" disabled>Arrived</button>
                     <button type="button" class="btn button1" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat" disabled>Comentar</button> 
                 </div>
 

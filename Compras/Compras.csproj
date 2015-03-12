@@ -88,6 +88,8 @@
     <None Include="Scripts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{e88681db-a03d-4c32-99e0-40b9023c1ee6}</SharePointProjectItemId>
     </None>
+    <Content Include="Pages\miscompras.aspx" />
+    <Content Include="Pages\new.aspx" />
     <Content Include="Scripts\bootstrap-old.min.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Default.js" />
@@ -98,6 +100,8 @@
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\knockout-2-2-1.js" />
     <Content Include="Scripts\Manager.js" />
+    <Content Include="Scripts\Miscompras.js" />
+    <Content Include="Scripts\New.js" />
     <Content Include="Scripts\_references.js" />
   </ItemGroup>
   <ItemGroup>

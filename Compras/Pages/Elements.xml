@@ -3,5 +3,7 @@
   <Module Name="Pages">
     <File Path="Pages\Default.aspx" Url="Pages/Default.aspx" ReplaceContent="TRUE" />
     <File Path="Pages\Manager.aspx" Url="Pages/Manager.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\miscompras.aspx" Url="Pages/miscompras.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\new.aspx" Url="Pages/new.aspx" ReplaceContent="TRUE" />
   </Module>
 </Elements>
